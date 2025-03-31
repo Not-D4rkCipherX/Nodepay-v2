@@ -413,10 +413,10 @@ class Nodepay:
             print(
                 f"{Fore.CYAN + Style.BRIGHT}[ {datetime.now().astimezone(wib).strftime('%x %X %Z')} ]{Style.RESET_ALL}"
                 f"{Fore.WHITE + Style.BRIGHT} | {Style.RESET_ALL}"
-                f"{Fore.BLUE + Style.BRIGHT}Wait For 55 Minutes For Next Ping...{Style.RESET_ALL}",
+                f"{Fore.BLUE + Style.BRIGHT}Wait For 1 Minutes For Next Ping...{Style.RESET_ALL}",
                 end="\r"
             )
-            await asyncio.sleep(55 * 60)
+            await asyncio.sleep(1 * 60)
             
     async def process_get_user_session(self, token: str, user_id: str, use_proxy: bool):
         proxy = self.get_next_proxy_for_account(user_id) if use_proxy else None
